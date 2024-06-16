@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EventController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\TicketController;
 
 /*
@@ -29,3 +29,7 @@ Route::put('/tickets/{ticket}', [TicketController::class, 'update']);
 Route::delete('/tickets/{ticket}', [TicketController::class, 'destroy']);
 Route::post('/tickets/purchase', [TicketController::class, 'purchase']);
 Route::post('/tickets/{ticket}/cancel', [TicketController::class, 'cancel']);
+
+// Routes for ReportController
+Route::get('/reports/revenue', [ReportController::class, 'revenue']);
+Route::get('/reports/tickets-sold', [ReportController::class, 'ticketsSold']);

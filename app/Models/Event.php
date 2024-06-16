@@ -17,7 +17,6 @@ class Event extends Model
         'endDate',
         'location',
         'capacity',
-        'eventType',
     ];
 
     public function tickets()

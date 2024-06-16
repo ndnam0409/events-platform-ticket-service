@@ -20,8 +20,7 @@ class EventController extends Controller
             'startDate' => 'required|date',
             'endDate' => 'required|date|after_or_equal:startDate',
             'location' => 'required|string|max:255',
-            'capacity' => 'required|integer|min:1',
-            'eventType' => 'required|string|max:255',
+            'capacity' => 'required|integer|min:1'
         ]);
 
         if ($validator->fails()) {
@@ -44,8 +43,7 @@ class EventController extends Controller
             'startDate' => 'required|date',
             'endDate' => 'required|date|after_or_equal:startDate',
             'location' => 'required|string|max:255',
-            'capacity' => 'required|integer|min:1',
-            'eventType' => 'required|string|max:255',
+            'capacity' => 'required|integer|min:1'
         ]);
 
         if ($validator->fails()) {
