@@ -11,7 +11,8 @@ class TicketController extends Controller
     
     public function index()
     {
-        return Ticket::all();
+        $tickets = Ticket::all();
+        return response()->json($tickets);
     }
 
     public function store(Request $request)
