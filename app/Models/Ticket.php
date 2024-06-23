@@ -18,10 +18,15 @@ class Ticket extends Model
         'price',
         'isSold',
         'eventID',
+        'userID',
     ];
 
     public function event()
     {
         return $this->belongsTo(Event::class, 'eventID', 'eventID');
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'userID', 'id');
     }
 }
